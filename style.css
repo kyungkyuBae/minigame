@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin : 0;
+
+}
+body{
+    background-color: black;
+}
+
+.game {
+    background-image: url(./img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width : 700px;
+    height: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.game__button{
+    width:50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 6px;
+    border : 3px solid black;
+    margin-bottom: 5px;
+    display: none;
+    
+}
+.game__button.active{
+    display: block;
+    width:50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 6px;
+    border : 3px solid black;
+    margin-bottom: 5px;
+}
+.game__button--stop{
+    width:50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 6px;
+    border : 3px solid black;
+    margin-bottom: 5px;
+    display: none;
+}
+.game__button--stop.active{
+    width:50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 6px;
+    border : 3px solid black;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.game__timer {
+    width : 100px;
+    text-align: center;
+    background-color:aliceblue;
+    border : 3px solid black;
+    border-radius: 6px;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.game__item__countbox {
+    font-size: 30px;
+    background-color: orange;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.game__option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top : 10px;
+}
+.game__createFild{
+    width: 680px;
+    height: 200px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.game__createFild.not{
+    pointer-events: none;
+}
+
+.game__button--carrot{
+    width: 50px;
+    height: 50px;
+    background-image: url(./img/carrot.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    top: 0;
+    left : 0;
+}
+
+.game__button--monster{
+    width: 50px;
+    height: 50px;
+    background-image: url(./img/bug.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    
+}
+.game__result{
+    padding: 10px 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 20px;
+    position: absolute;
+    bottom : 200px;
+    left : 200px;
+}
+.game__result.active{
+    display: flex;
+}
+
+.game__button__reset {
+
+    font-size: 40px;
+    border-radius: 8px;
+}
+.game__result__desc {
+    font-size: 40px;
+    color: #fff;
+}
+
+/* hover 됐을때 scale up */
+
+.game__button--carrot:hover,
+.game__button--monster:hover,
+.game__button:hover,
+.game__button--stop:hover,
+.game__button__reset:hover{
+    transform: scale(1.1);
+}
